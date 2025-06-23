@@ -1,13 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charity Water Game</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Water Journey Maze</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Welcome to the Charity Water Game Prototype</h1>
+    <div class="logo">charity: water</div>
+    <h1>Water Journey Maze</h1>
+
+    <div class="game-container">
+        <div class="maze" id="maze"></div>
+        <div class="overlay" id="startScreen">
+            <div>Gather all of the water<br>in order to complete the level!</div>
+            <button id="startButton">Start</button>
+        </div>
+        <div class="overlay" id="endScreen" style="display: none;">
+            <div id="endMessage"></div>
+            <button id="restartButton">Restart</button>
+        </div>
+    </div>
+
+    <div class="info">
+        <div>Time: <span id="timer">60</span> s</div>
+        <div>
+            💧
+            <span id="collected">0</span>/7
+        </div>
+    </div>
+
+    <div class="controls">
+        <div>
+            <button class="arrow-btn" onclick="manualMove(0,-1)">&#x2B06;</button>
+        </div>
+        <div>
+            <button class="arrow-btn" onclick="manualMove(-1,0)">&#x2B05;</button>
+            <button class="arrow-btn" onclick="manualMove(1,0)">&#x27A1;</button>
+        </div>
+        <div>
+            <button class="arrow-btn" onclick="manualMove(0,1)">&#x2B07;</button>
+        </div>
+    </div>
+
+    <audio id="splashSound" src="https://www.soundjay.com/button/sounds/button-16.mp3" preload="auto"></audio>
+
     <script src="script.js"></script>
 </body>
 </html>
