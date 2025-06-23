@@ -20,19 +20,23 @@ body {
   background: #fff;
   margin: 0;
   padding: 0;
+  margin-bottom: 40px; /* Add space at the bottom of the page */
 }
 h1 {
   color: #e6c556;
   font-size: 2em;
   margin: 10px 0;
 }
-.logo {
-  color: black;
-  font-weight: bold;
-  font-size: 1.5em;
+.logo-img {
+  margin: 10px auto 0 auto; /* Reduced bottom margin to 0, top to 10px */
+  max-width: 300px;
+  width: 100%;
+  height: auto;
 }
 .game-container {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-top: 20px;
   position: relative;
 }
@@ -90,18 +94,22 @@ h1 {
   cursor: pointer;
 }
 .info {
-  margin-top: 10px;
+  position: static;
+  margin: 20px 0 0 0;
   font-size: 1em;
+  text-align: center;
+  display: block;
 }
 .controls {
-  margin-top: 10px;
-  font-size: 1.5em;
+  margin: 0;
+  font-size: 1em;
   color: #a67844;
+  display: inline-block;
 }
 .arrow-btn {
   border: none;
   background: none;
-  font-size: 2em;
+  font-size: 1.2em; /* Smaller arrows */
   cursor: pointer;
-  margin: 5px;
+  margin: 2px;
 }

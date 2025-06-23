@@ -11,15 +11,16 @@ let interval; // For the countdown timer
 
 // This function sets up the maze and resets everything
 function initializeGame() {
-  // The maze is a 2D array. Each cell can be 'player', 'empty', 'wall', 'water', or 'end'.
+  // This maze is a bit more complex, but all water droplets and the exit are accessible.
+  // 'player' is the starting position, 'water' are the droplets, 'end' is the goal, and 'wall' are obstacles.
   mazeData = [
-    ['player','empty','wall','wall','empty','water','wall'],
-    ['empty','empty','empty','wall','empty','empty','wall'],
-    ['water','wall','water','empty','wall','empty','wall'],
-    ['empty','empty','empty','empty','empty','empty','wall'],
-    ['wall','wall','wall','wall','empty','water','wall'],
-    ['water','empty','wall','empty','empty','empty','wall'],
-    ['wall','empty','wall','empty','water','empty','end']
+    ['player','empty','wall','empty','water','empty','empty'],
+    ['wall','empty','wall','empty','wall','wall','empty'],
+    ['water','empty','empty','empty','empty','water','wall'],
+    ['empty','wall','wall','wall','empty','empty','empty'],
+    ['empty','empty','water','wall','empty','wall','empty'],
+    ['wall','empty','empty','empty','empty','wall','water'],
+    ['empty','wall','water','wall','empty','empty','end']
   ];
   playerPosition = { x: 0, y: 0 };
   collected = 0;
@@ -71,7 +72,7 @@ function move(dx, dy) {
   // If it's the end, check if all water is collected
   if (target === 'end') {
     clearInterval(interval);
-    if (collected === 7) {
+    if (collected === 6) {
       showEndScreen('🎉 Congratulations! You collected all the water!');
     } else {
       showEndScreen('💧 Oops! You missed some water. Try again!');
