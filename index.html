@@ -9,6 +9,7 @@
 <body>
     <img src="img/charitywater_logo_horizontal_BlackText.png" alt="charity: water logo" class="logo-img">
     <h1>Water Journey Maze</h1>
+    <div style="margin-bottom: 16px; font-size: 1.1em; color: #444;">Use arrows on your keyboard to move!</div>
 
     <div class="game-container">
         <div class="maze" id="maze"></div>
@@ -23,23 +24,9 @@
     </div>
 
     <div class="info">
-        <div>Time: <span id="timer">60</span> s</div>
-        <div>
-            💧
-            <span id="collected">0</span>/7
-        </div>
-    </div>
-
-    <div class="controls">
-        <div>
-            <button class="arrow-btn" onclick="manualMove(0,-1)">&#x2B06;</button>
-        </div>
-        <div>
-            <button class="arrow-btn" onclick="manualMove(-1,0)">&#x2B05;</button>
-            <button class="arrow-btn" onclick="manualMove(1,0)">&#x27A1;</button>
-        </div>
-        <div>
-            <button class="arrow-btn" onclick="manualMove(0,1)">&#x2B07;</button>
+        <div style="display: flex; align-items: center; justify-content: center; gap: 20px;">
+            <div>Time: <span id="timer">60</span> s</div>
+            <div>💧 <span id="collected">0</span>/6</div>
         </div>
     </div>
 

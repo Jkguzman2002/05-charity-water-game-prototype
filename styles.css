@@ -20,17 +20,20 @@ body {
   background: #fff;
   margin: 0;
   padding: 0;
+  margin-bottom: 48px; /* Add space at the bottom of the page */
 }
 h1 {
   color: #e6c556;
   font-size: 2em;
-  margin: 10px 0;
+  margin: 4px 0 10px 0; /* Smaller top margin, keep bottom margin */
 }
 .logo-img {
-  margin: 10px auto 0 auto; /* Reduced bottom margin to 0, top to 10px */
+  margin: 10px auto 0 auto; /* Small top margin, no bottom margin */
+  margin-bottom: 0;
   max-width: 300px;
   width: 100%;
   height: auto;
+  display: block;
 }
 .game-container {
   display: inline-block;
