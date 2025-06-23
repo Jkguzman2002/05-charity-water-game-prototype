@@ -44,8 +44,20 @@ function renderMaze() {
         div.textContent = '💧';
       }
       if (cell === 'end') div.classList.add('end');
-      // Show the player
-      if (playerPosition.x === x && playerPosition.y === y) div.classList.add('player');
+      // Show the player as an image and center it using flexbox
+      if (playerPosition.x === x && playerPosition.y === y) {
+        // Use flexbox to center the player image in the cell
+        div.style.display = 'flex';
+        div.style.alignItems = 'center';
+        div.style.justifyContent = 'center';
+        // Create the player image (jerry can)
+        const playerImg = document.createElement('img');
+        playerImg.src = 'img/jerry_can_black.png';
+        playerImg.alt = 'Player (Jerry Can)';
+        playerImg.style.width = '30px';
+        playerImg.style.height = '40px';
+        div.appendChild(playerImg);
+      }
       maze.appendChild(div);
     });
   });

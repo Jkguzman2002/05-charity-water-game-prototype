@@ -20,7 +20,6 @@ body {
   background: #fff;
   margin: 0;
   padding: 0;
-  margin-bottom: 40px; /* Add space at the bottom of the page */
 }
 h1 {
   color: #e6c556;
@@ -34,9 +33,7 @@ h1 {
   height: auto;
 }
 .game-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: inline-block;
   margin-top: 20px;
   position: relative;
 }
@@ -101,15 +98,14 @@ h1 {
   display: block;
 }
 .controls {
-  margin: 0;
-  font-size: 1em;
+  margin-top: 10px;
+  font-size: 1.5em;
   color: #a67844;
-  display: inline-block;
 }
 .arrow-btn {
   border: none;
   background: none;
-  font-size: 1.2em; /* Smaller arrows */
+  font-size: 2em;
   cursor: pointer;
-  margin: 2px;
+  margin: 5px;
 }
